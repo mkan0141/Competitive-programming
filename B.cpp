@@ -13,12 +13,16 @@ using namespace std;
 bool debug=false;
 
 int main(){
-  int a,b,c;
-  cin>>a>>b>>c;
-  if(a<=c&&c<=b){
-    cout<<"Yes"<<endl;
-  }else{
-    cout<<"No"<<endl;
+  int n,m;
+  int x[55]={0};
+  cin>>n>>m;
+  for(int i=0;i<m;i++){
+    int a,b;
+    cin>>a>>b;
+    x[a]++;x[b]++;
+  }
+  for(int i=1;i<=n;i++){
+    cout<<x[i]<<endl;
   }
   return 0;
 }
