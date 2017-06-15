@@ -44,14 +44,12 @@ void sieve(){
       for(int j=2*i;j<150000;j+=i)is_prime[j]=false;
     }
   }
-  //rep(i,50)cout<<"DEBUG "<<prime[i]<<endl;
 }
 
 void solve(int n,int p){
   ll data[11000];
   int x=0;
   while(prime[x]<=n){
-    //cout<<x<<" "<<prime[x]<<endl;
     x++;
   }
   int cnt=0;
@@ -62,7 +60,6 @@ void solve(int n,int p){
     }
   }
   sort(data,data+cnt);
-  //rep(i,p)cout<<i+1<<" "<<v[i]<<endl;
   cout<<data[p-1]<<endl;
 }
 
