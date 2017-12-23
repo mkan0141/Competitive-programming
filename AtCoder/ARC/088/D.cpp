@@ -41,12 +41,14 @@ bool debug=false;
 /*---------------------------------------------------*/
 
 int main(){
-  ll x,y,ans=0,tmp=1;
-  cin>>x>>y;
-  tmp=x;
-  while(x<=tmp&&tmp<=y){
-    ans++;
-    tmp=tmp*2;
+  int ans;
+  string s;
+  cin>>s;
+  ans=s.size();
+  rep(i,s.size()-1){
+    if(s[i]!=s[i+1]){
+      ans=min(ans,max(i+1,(int)s.size()-i-1));
+    }
   }
   cout<<ans<<endl;
   return 0;
